@@ -1,0 +1,52 @@
+<h1>Request</h1><br>
+
+<!-- Text input-->
+<form class="form-horizontal" action="/request/add" method="POST">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Maintenance Request Form</legend><br><br>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="Client">Client Name</label>
+  <div class="controls">
+    <input id="Client" name="client_name" type="text" placeholder="Client" class="input-xlarge" required="">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">Contacts</label>
+  <div class="controls">
+    <input id="textinput" name="contact_number" type="enum" placeholder="Cell Number" class="input-xlarge" required="">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">Subject</label>
+  <div class="controls">
+    <input id="textinput" name="subject" type="text" placeholder="Problem" class="input-xlarge" required="">
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="control-group">
+  <label class="control-label" for="textarea">Description</label>
+  <div class="controls">                     
+    <textarea id="textarea" name="description"></textarea>
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="control-group">
+  <label class="control-label" for="button1id">Options</label>
+  <div class="controls">
+    <button id="button1id" name="button1id" class="btn btn-success">Submit</button><br>
+    <button id="button2id" name="button2id" class="btn btn-danger">Cancel</button><br>
+  </div>
+</div>
+
+</fieldset>
+              </form>

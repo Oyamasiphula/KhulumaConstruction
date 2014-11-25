@@ -1,0 +1,17 @@
+CREATE DATABASE KhuluMa;
+CREATE USER khuluma@localhost IDENTIFIED BY 'password';
+
+GRANT ALL PRIVILEGES ON KhuluMa.* TO khuluma@localhost;
+FLUSH PRIVILEGES;
+
+use KhuluMa;
+
+create table maintenance_request (
+    id int not null auto_increment,
+    client_name char(100),
+    contact_no char(100),
+    subject char(50),
+    description char(150),
+   	primary key(id)
+
+);
