@@ -7,7 +7,8 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     products = require('./routes/products'),
     tenders = require('./routes/tenders'),
-    maintenanceRequests = require('./routes/maintenance-requests');
+    maintenanceRequests = require('./routes/maintenance-requests'),
+    users = require('./routes/users');
 
 
 var app = express();
@@ -34,21 +35,34 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //setup the handlers
+/*
 app.get('/products', products.show);
 app.get('/products/edit/:id', products.get);
 app.post('/products/update/:id', products.update);
 app.post('/products/add', products.add);
 //this should be a post but this is only an illustration of CRUD - not on good practices
 app.get('/products/delete/:id', products.delete);
+*/
+
 
 app.get('/tenders', tenders.show);
 app.get('/tenders/add', tenders.add);
-app.get('/tenders/complain', tenders.complain);
+app.get('/tenders/complaint', tenders.complaint);
 app.get('/tenders/register', tenders.register);
 
-app.get('/request', maintenanceRequests.request);
-app.post('/request/add', maintenanceRequests.add);
-app.get('/requests', tenders.show);
+
+app.get('/', function (req, res) {
+  res.render("index");
+});
+
+
+app.get('/requests', maintenanceRequests.request);
+app.post('/requests', maintenanceRequests.add);
+app.get('/requests', maintenanceRequests.show);
+
+app.get('/users', users.request);
+app.post('/users', users.add);
+app.get('/users', users.show);
 
 //start everything up
 app.listen(3000, function () {

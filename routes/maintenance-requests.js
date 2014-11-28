@@ -1,5 +1,5 @@
 exports.show = function (req, res, next) {
-	res.render("tenders");
+	res.render("maintenance-request");
 };
 
 exports.add = function (req, res, next) {
@@ -20,21 +20,21 @@ exports.add = function (req, res, next) {
         	if (err)
               console.log("Error inserting : %s ",err );
          
-          	res.redirect('/requests');
+          	res.redirect('maintenance_request');
       	});
 	});
 };
 
-exports.complain = function(req, res, next){
-	res.render("tenders-complain");
+exports.complaint = function(req, res, next){
+	res.render('maintenance-request');
 
 };
 exports.request = function(req , res , next){
-	res.render("tenders-request");
+	res.render('maintenance-request');
 
 };
 
 exports.register = function(req ,res ,next){
 
-	res.render("tenders-register");
+	res.render('maintenance-request');
 };

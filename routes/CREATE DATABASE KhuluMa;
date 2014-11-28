@@ -8,10 +8,51 @@ use KhuluMa;
 
 create table maintenance_request (
     id int not null auto_increment,
-    client_name char(100),
-    contact_no char(100),
+    clientName char(100),
+    contactNo char(30),
     subject char(50),
     description char(150),
    	primary key(id)
 
 );
+create table users (
+    id int not null auto_increment,
+    name char(100),
+    surname char(30),
+    title char(50),
+    address1 char(150),
+    address2 char(150),
+    town char(100),
+    mobileNo char(100),
+    registerAs char(100),
+    password char(50),
+    repassword char(50),
+   	primary key(id)
+
+);
+
+create table tenders (
+    id int not null auto_increment,
+    ReferenceNo char(100),
+    Title char(50),
+    IssueDate char(150),
+    ClosingDate char(150),
+    MeetingDAte char(100),
+    Description char(100),
+   	primary key(id)
+
+);
+
+create table complaint_logs (
+    id int not null auto_increment,
+    name char(100),
+    homeAdress char(50),
+    subject char(150),
+    complainDescription char(150),
+    serviceRate char(100),
+   	primary key(id)
+
+);
+
+
+

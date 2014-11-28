@@ -1,5 +1,5 @@
 exports.show = function (req, res, next) {
-	res.render("tenders");
+	res.render("users");
 };
 
 exports.add = function (req, res, next) {
@@ -7,36 +7,40 @@ exports.add = function (req, res, next) {
 
 		var input = JSON.parse(JSON.stringify(req.body));
 		var data = {
-			ReferenceNo: input.ReferenceNo,
-			Title : input.Title,
-			IssueDate: input.IssueDate,
-			ClosingDate: input.ClosingDate,
-			MeetingDAte: input.MeetingDAte,
-            description : input.description,
+			name: input.name,
+			surname: input.surname,
+			title: input.title,
+			address1: input.address1,
+			address2: input.address2,
+			town: input.town,
+			mobileNo: input.mobileNo,
+			registerAs : input.registerAs,
+			password: input.	password,
+			repassword: input.repassword,
         };
 
 		if (err) 
 			return next(err);
 		
-		connection.query('insert into tenders set ?', data, function(err, results) {
+		connection.query('insert into users set ?', data, function(err, results) {
         	if (err)
               console.log("Error inserting : %s ",err );
          
-          	res.redirect('tenders');
+          	res.redirect('/users');
       	});
 	});
 };
 
 exports.complaint = function(req, res, next){
-	res.render('tenders');
+	res.render('users');
 
 };
 exports.request = function(req , res , next){
-	res.render('tenders');
+	res.render('users');
 
 };
 
 exports.register = function(req ,res ,next){
 
-	res.render('tenders');
+	res.render('users');
 };
