@@ -1,6 +1,5 @@
-<form class="form-horizontal">
+<form class="form-horizontal" action="/users/add" method="POST">
 <fieldset>
-
 <!-- Form Name -->
 <legend><STRONG>Registration Form</STRONG></legend><br><br>
 
@@ -8,7 +7,7 @@
 <div class="control-group">
   <label class="control-label" for="textinput">Name:</label>
   <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="Name" class="input-xlarge">
+    <input id="textinput" name="name" type="text" placeholder="Name" class="input-xlarge"required>
     <p class="help-block">Full names</p>
   </div>
 </div>
@@ -17,7 +16,7 @@
 <div class="control-group">
   <label class="control-label" for="textinput">Surname:</label>
   <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="Surname" class="input-xlarge">
+    <input id="textinput" name="surname" type="text" placeholder="Surname" class="input-xlarge"required>
 
   </div>
 </div>
@@ -26,7 +25,7 @@
 <div class="control-group">
   <label class="control-label" for="textinput">Tittle</label>
   <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="(e.g. Doctor)" class="input-xlarge">
+    <input id="textinput" name="title" type="text" placeholder="(e.g. Doctor)" class="input-xlarge"required>
   </div>
 </div> 
 
@@ -34,7 +33,7 @@
 <div class="control-group">
   <label class="control-label" for="textinput">Address 1:</label>
   <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="Address 1" class="input-xlarge">
+    <input id="textinput" name="address1" type="text" placeholder="Address 1" class="input-xlarge"required>
 
   </div>
 </div>
@@ -43,7 +42,7 @@
 <div class="control-group">
   <label class="control-label" for="textinput">Address 2:</label>
   <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="Address 2" class="input-xlarge">
+    <input id="textinput" name="address2" type="text" placeholder="Address 2" class="input-xlarge"required>
 
   </div>
 </div>
@@ -52,7 +51,7 @@
 <div class="control-group">
   <label class="control-label" for="textinput">Town</label>
   <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="(e.g. Cape Town)" class="input-xlarge">
+    <input id="textinput" name="town" type="text" placeholder="(e.g. Cape Town)" class="input-xlarge"required>
   
   </div>
 </div>
@@ -61,7 +60,7 @@
 <div class="control-group">
   <label class="control-label" for="passwordinput">Mobile Phone:</label>
   <div class="controls">
-    <input id="enum" name="Number" type="int" placeholder="(e.g. 021 7533 756)" class="input-xlarge">
+    <input id="enum" name="mobileNo" type="int" placeholder="(e.g. 021 7533 756)" class="input-xlarge"required>
   </div>
 </div>
 
@@ -69,7 +68,7 @@
 <div class="control-group">
   <label class="control-label" for="selectbasic">Register as:</label>
   <div class="controls">
-    <select id="selectbasic" name="selectbasic" class="input-xlarge">
+    <select id="selectbasic" name="registerAs" class="input-xlarge"required>
       <option>Sub - Constructor</option>
       <option>Constructor/Building Company</option>
     </select>
@@ -80,7 +79,7 @@
 <div class="control-group">
   <label class="control-label" for="passwordinput">Password:</label>
   <div class="controls">
-    <input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="input-xlarge">
+    <input id="passwordinput" name="password" type="password" placeholder="Password" class="input-xlarge"required>
     <p class="help-block">Choose a unique/secrete password</p>
   </div>
 </div>
@@ -89,7 +88,7 @@
 <div class="control-group">
   <label class="control-label" for="passwordinput">Repassword:</label>
   <div class="controls">
-    <input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="input-xlarge">
+    <input id="passwordinput" name="repassword" type="password" placeholder="Password" class="input-xlarge"required>
     <p class="help-block">Enter the corresponding password </p>
   </div>
 </div>

@@ -33,14 +33,17 @@ create table users (
 
 create table tenders (
     id int not null auto_increment,
-    ReferenceNo char(100),
-    Title char(50),
-    IssueDate char(150),
-    ClosingDate char(150),
-    MeetingDAte char(100),
-    Description char(100),
-   	primary key(id)
-
+    ReferenceNo char(50),
+    title char(30),
+    issuer char(50),
+    issueDate char(30),
+    sector char(50),
+    closingDate char(30),
+    closingTime char(30),
+    commonMeeting char(30),
+    meetingDate char(30),
+    description char(150),
+    primary key(id)
 );
 
 create table complaint_logs (

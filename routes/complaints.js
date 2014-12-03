@@ -1,16 +1,17 @@
 exports.show = function (req, res, next) {
-	res.render("tenders");
+	res.render("complaints");
 };
+
 exports.add = function (req, res, next) {
 	req.getConnection(function(err, connection){
 
 		var input = JSON.parse(JSON.stringify(req.body));
 		var data = {
-			name: input.name,
-			homeAdress: input.homeAdress,
-			subject: input.subject,
-            complainDescription: input.complainDescription,
-            serviceRate: input.serviceRate,
+			name : input.name,
+			homeAdress : input.homeAdress,
+			subject : input.subject,
+			complainDescription : input.complainDescription,
+			serviceRate: input.serviceRate,
         };
 
 		if (err) 
@@ -20,27 +21,25 @@ exports.add = function (req, res, next) {
         	if (err)
               console.log("Error inserting : %s ",err );
          
-          	res.redirect('/requests');
+          	res.redirect('/complaints/excellent');
       	});
 	});
 };
 
-exports.add = function (req, res, next) {
-	//tenders-add
-	res.render("tenders-add");
-
-};
-
 exports.complaint = function(req, res, next){
-	res.render("tenders-complaint");
+	res.render('complaints');
 
 };
 exports.request = function(req , res , next){
-	res.render("tenders-request");
+	res.render('complaints');
 
 };
 
 exports.register = function(req ,res ,next){
 
-	res.render("tenders-register");
+	res.render('complaints');
 };
+
+exports.excellent = function (req, res) {
+	res.render("complaints-excellent");
+}

@@ -20,7 +20,7 @@ exports.add = function (req, res, next) {
         	if (err)
               console.log("Error inserting : %s ",err );
          
-          	res.redirect('maintenance_request');
+          	res.redirect('/maintenance-request/thankyou');
       	});
 	});
 };
@@ -38,3 +38,8 @@ exports.register = function(req ,res ,next){
 
 	res.render('maintenance-request');
 };
+
+exports.thankyou = function (req, res) {
+	res.render("maintenance-request-thankyou");
+	
+}

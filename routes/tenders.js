@@ -8,10 +8,14 @@ exports.add = function (req, res, next) {
 		var input = JSON.parse(JSON.stringify(req.body));
 		var data = {
 			ReferenceNo: input.ReferenceNo,
-			Title : input.Title,
-			IssueDate: input.IssueDate,
-			ClosingDate: input.ClosingDate,
-			MeetingDAte: input.MeetingDAte,
+			title: input. title,
+			issuer: input.issuer,
+			issueDate: input.issueDate,
+			sector: input.sector,
+			closingDate: input.closingDate,
+			closingTime: input.closingTime,
+			commonMeeting: input.commonMeeting,
+			meetingDate: input.meetingDate,
             description : input.description,
         };
 
@@ -22,21 +26,26 @@ exports.add = function (req, res, next) {
         	if (err)
               console.log("Error inserting : %s ",err );
          
-          	res.redirect('tenders');
+          	res.redirect('/tenders');
       	});
 	});
 };
 
 exports.complaint = function(req, res, next){
-	res.render('tenders');
+	res.render('/tenders');
 
 };
 exports.request = function(req , res , next){
-	res.render('tenders');
+	res.render('/tenders');
 
 };
 
 exports.register = function(req ,res ,next){
 
-	res.render('tenders');
+	res.render('/tenders');
+};
+
+exports.update = function(req ,res ,next){
+
+	res.render('/tenders');
 };

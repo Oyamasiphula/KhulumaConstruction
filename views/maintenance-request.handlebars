@@ -1,5 +1,5 @@
 <!-- Text input-->
-<form class="form-horizontal" action="/request/add" method="POST">
+<form class="form-horizontal" action="/maintenance-request/add" method="POST">
 <fieldset>
 
 <!-- Form Name -->
@@ -9,7 +9,7 @@
 <div class="control-group">
   <label class="control-label" for="Client">Client Name</label>
   <div class="controls">
-    <input id="Client" name="client_name" type="text" placeholder="Client" class="input-xlarge" required="">
+    <input id="Client" name="client_name" type="text" placeholder="Client" class="input-xlarge" required>
   </div>
 </div>
 
@@ -17,7 +17,7 @@
 <div class="control-group">
   <label class="control-label" for="textinput">Contacts</label>
   <div class="controls">
-    <input id="textinput" name="contact_number" type="enum" placeholder="Cell Number" class="input-xlarge" required="">
+    <input id="textinput" name="contact_no" type="enum" placeholder="Cell Number" class="input-xlarge" required>
   </div>
 </div>
 
@@ -25,7 +25,7 @@
 <div class="control-group">
   <label class="control-label" for="textinput">Subject</label>
   <div class="controls">
-    <input id="textinput" name="subject" type="text" placeholder="Problem" class="input-xlarge" required="">
+    <input id="textinput" name="subject" type="text" placeholder="Problem" class="input-xlarge" required>
   </div>
 </div>
 
@@ -33,7 +33,7 @@
 <div class="control-group">
   <label class="control-label" for="textarea">Description</label>
   <div class="controls">                     
-    <textarea id="textarea" name="description"></textarea>
+    <textarea id="textarea" placeholder="description" name="description" class="input-xlarge" requred></textarea>
   </div>
 </div>
 

@@ -1,25 +1,29 @@
-<h1>Add Tenders</h1>
+<form class="form-horizontal" action="/tenders/add" method="POST">
+<fieldset>
 
- <div>
+<!-- Form Name -->
+<legend><strong>Add Tenders</strong></legend><br><br>
   
-  <strong>Reference No:</strong><br>
-<input id="Reference No" type="num" placeholder="Reference Number" name="Reference No"><br>
+    <strong>Reference No:</strong><br>
+<input id="Reference No" type="num" placeholder="Reference Number" name="ReferenceNo" required><br>
     <strong>Title:</strong><br>
-        <input id="Mrs||Mr" type="text" class="col-md-4" placeholder="Mrs or Mr" name="Title"><br>
-            <strong>Issuer:</strong><br>
-          <input id="Issuer" type="#" placeholder="Issuer" name="Issuer"><br>
+        <input id="Mrs||Mr" type="textinput" class="col-md-4" placeholder="Mrs or Mr" name="title"  required><br>
+            <strong>Issuer:</strong>
+          <input id="Issuer" type="textinput" placeholder="Issuer" name="issuer" required><br>
       <strong>Issue Date:</strong><br>
-    <input id="DD/MM/YYYY" type="#" placeholder="DD/MM/YYYY" name="Issue Date ><br>
+    <input id="DD/MM/YYYY" type="enum" placeholder="DD/MM/YYYY" name="issueDate" required><br>
   <strong>Sector:</strong><br>
-<input id="Sector" type ="textinput" placeholder="Sector" name="Sector"><br>
+<input id="Sector" type ="textinput" placeholder="Sector" name="sector" required><br>
   <strong>Closing date:</strong><br>
-    <input id="DD/MM/YYYY" type="enum" placeholder="DD/MM/YYYY" name="Closing date"><br>
+    <input id="DD/MM/YYYY" type="enum" placeholder="DD/MM/YYYY" name="closingDate" required><br>
       <strong>Closing Time:</strong><br>
-        <input id="HH:MM" type="enum" placeholder="HH:MM" name="Closing Time" ><br>
+        <input id="HH:MM" type="enum" placeholder="HH:MM" name="closingTime"  required><br>
+        <strong>Common Meeting:</strong><br>
+            <input id="Yes or No" type="column" class="col-md-4" placeholder="Yes or No" name="commonMeeting" required><br>
             <strong>Meeting Date:</strong><br>
-          	<input id="DD/MM/YYYY" type="column" class="col-md-4" placeholder="DD/MM/YYYY" name="Description required=""><br>
+          	<input id="DD/MM/YYYY" type="column" class="col-md-4" placeholder="DD/MM/YYYY" name="meetingDate" required><br>
           <strong>Description:</strong><br>
-         <input id="Description" placeholder="Description" type="column" class="col-md-4" name="Description"><br>
+         <input id="Description" placeholder="Description" type="textinput" class="col-md-4" name="description" required><br>
         <br><br>
     <button type="submit" class="btn btn-submit">Submit</button><br>
   <button type="back" class="btn btn-back">Back</button><br>

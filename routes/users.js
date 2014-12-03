@@ -15,7 +15,7 @@ exports.add = function (req, res, next) {
 			town: input.town,
 			mobileNo: input.mobileNo,
 			registerAs : input.registerAs,
-			password: input.	password,
+			password: input.password,
 			repassword: input.repassword,
         };
 
@@ -41,6 +41,10 @@ exports.request = function(req , res , next){
 };
 
 exports.register = function(req ,res ,next){
+
+	res.render('users');
+};
+exports.update = function(req ,res ){
 
 	res.render('users');
 };
