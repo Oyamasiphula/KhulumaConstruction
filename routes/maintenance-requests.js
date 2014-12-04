@@ -30,8 +30,18 @@ exports.complaint = function(req, res, next){
 
 };
 exports.request = function(req , res , next){
-	res.render('maintenance-request');
 
+
+	req.getConnection(function(err, connection){
+		if (err) 
+			return next(err);
+		connection.query('SELECT * from maintenance_request', [], function(err, maintenance_requests) {
+        	if (err) return next(err);
+    		res.render( 'maintenance-request', {
+    			maintenance_requests : maintenance_requests
+    		});
+      });
+	});
 };
 
 exports.register = function(req ,res ,next){

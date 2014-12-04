@@ -1,14 +1,22 @@
-<form class="form-horizontal" action="/tenders/add" method="POST">
+<div class="container">
+  <div class="row">
+
+  
+  <div class="col-md-3"></div>
+  <div class="col-md-4"></div>
+
+
+<form class="" action="/tenders/add" method="POST">
 <fieldset>
 
 <!-- Form Name -->
-<legend><strong>Add Tenders</strong></legend><br><br>
+<legend><strong>Add Tenders</strong></legend>
   
     <strong>Reference No:</strong><br>
 <input id="Reference No" type="num" placeholder="Reference Number" name="ReferenceNo" required><br>
     <strong>Title:</strong><br>
-        <input id="Mrs||Mr" type="textinput" class="col-md-4" placeholder="Mrs or Mr" name="title"  required><br>
-            <strong>Issuer:</strong>
+        <input id="Mrs||Mr" type="textinput" placeholder="Mrs||Mr" name="title"  required><br>
+            <strong>Issuer:</strong><br>
           <input id="Issuer" type="textinput" placeholder="Issuer" name="issuer" required><br>
       <strong>Issue Date:</strong><br>
     <input id="DD/MM/YYYY" type="enum" placeholder="DD/MM/YYYY" name="issueDate" required><br>
@@ -19,15 +27,14 @@
       <strong>Closing Time:</strong><br>
         <input id="HH:MM" type="enum" placeholder="HH:MM" name="closingTime"  required><br>
         <strong>Common Meeting:</strong><br>
-            <input id="Yes or No" type="column" class="col-md-4" placeholder="Yes or No" name="commonMeeting" required><br>
-            <strong>Meeting Date:</strong><br>
-          	<input id="DD/MM/YYYY" type="column" class="col-md-4" placeholder="DD/MM/YYYY" name="meetingDate" required><br>
+            <input id="Yes||No" type="column"placeholder="Yes||No" name="commonMeeting" required><br>
+              <strong>Meeting Date:</strong><br>
+          	<input id="DD/MM/YYYY" type="column" placeholder="DD/MM/YYYY" name="meetingDate" required><br>
           <strong>Description:</strong><br>
-         <input id="Description" placeholder="Description" type="textinput" class="col-md-4" name="description" required><br>
-        <br><br>
-    <button type="submit" class="btn btn-submit">Submit</button><br>
-  <button type="back" class="btn btn-back">Back</button><br>
-<button type="cancel" class="btn btn-cancel">Cancel</button><br>
+         <textarea id="Description" placeholder="Description" type="textinput" class="col-md-6" name="description" required></textarea><br><br>
+        <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  <button type="back" class="btn btn-warning">Back</button>
+<button type="cancel" class="btn btn-danger">Cancel</button>
 
     </form>
-      </div>

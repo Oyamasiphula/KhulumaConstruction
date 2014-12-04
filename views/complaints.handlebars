@@ -1,10 +1,15 @@
-<h1>Complaint Form</h1><br>
+<div class="container">
+  <div class="row">
+
+  
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
 
 <form class="form-horizontal" action="/complaints/add" method="POST">
 <fieldset>
 
 <!-- Form Name -->
-<legend>Complaint Form</legend><br><br>
+<legend><strong>Complaint Form</strong></legend>
 
 <!-- Text input-->
 <div class="control-group">
@@ -33,7 +38,7 @@
 </div>
 
 <!-- Textarea -->
-<div class="control-group">
+<div class="R-Rcontrol-group">
   <label class="control-label" for="textarea"><strong>Complain Description</strong></label>
   <div class="controls">                     
     <textarea id="textarea" name="complainDescription" type="textinput" placeholder="Complain Description" ></textarea>
@@ -41,19 +46,19 @@
 </div>
 
 <!-- Multiple Radios (inline) -->
-<div class="control-group">
-  <label class="control-label" for="radios"><strong>Service Rendered Rate</strong></label>
+<div class="r-control-group">
+  <label class="control-label" for="radios"><strong>Service Rendered Rate</strong>
   <div class="controls">
     <label class="radio inline" for="radios-0">
-      <input type="radio" name="serviceRate" id="radios-0" value="1" checked="checked">
+      <input type="radio" name="serviceRate" id="radios-0" value="1">
       1
     </label>
     <label class="radio inline" for="radios-1">
-      <input type="radio" name="serviceRate" id="radios-1" value="2"></label>
+      <input type="radio" name="serviceRate" id="radios-1" value="2">
       2
       </label>
     <label class="radio inline" for="radios-1">
-      <input type="radio" name="serviceRate" id="radios-1" value="2"></label>
+      <input type="radio" name="serviceRate" id="radios-1" value="2">
       3
     </label>
     <label class="radio inline" for="radios-3">
@@ -85,7 +90,8 @@
       10
     </label>
   </div>
-</div>
+
+
 
 <br><br>
 
@@ -93,7 +99,7 @@
 <div class="control-group">
   <label class="control-label" for="singlebutton"></label>
   <div class="controls">
-    <button id="singlebutton"  name="singlebutton" class="btn btn-inverse">Submit</button>
+    <button id="singlebutton"  name="singlebutton" class="btn btn-success">Submit</button>
   </div>
 </div>
 <!-- Button (Double) -->
@@ -106,3 +112,12 @@
 
 </fieldset>
 </form>
+<style type="text/css">
+
+.R-control-group{
+
+  display: inline;
+  padding-right: 400px;
+}
+  </style>
+
