@@ -31,7 +31,16 @@ exports.complaint = function(req, res, next){
 
 };
 exports.request = function(req , res , next){
-	res.render('complaints');
+	req.getConnection(function(err, connection){
+		if (err) 
+			return next(err);
+		connection.query('SELECT * from complaint_logs', [], function(err, complaints) {
+        	if (err) return next(err);
+    		res.render( 'complaints', {
+    			complaints : complaints
+    		});
+      });
+	});
 
 };
 

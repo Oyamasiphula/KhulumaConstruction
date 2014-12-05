@@ -1,75 +1,62 @@
 <div class="container">
   <div class="row">
-
-  
-  <div class="col-md-8">
-    
-    <table class="table">
-      <tr>
+    <div class="col-md-8">
+      <table class="table">
+  <tr>
         <th>Client name</th>
-      </tr>
-      {{#maintenance_requests}}
-        <tr>
-          <td>{{client_name}}</td>
-        </tr>
-      {{/maintenance_requests}}
-    </table>
-  </div>
+        <th>Contact number</th>
+        <th>Subject</th>
+        <th>Description</th>
+  </tr>
+{{#maintenance_requests}}
+  <tr>
+        <td>{{client_name}}</td>
+        <td>{{contact_no}}</td>
+        <td>{{subject}}</td>
+        <td>{{description}}</td>
+  </tr>
+        {{/maintenance_requests}}
+      </table>
+    </div>
   <div class="col-md-4">
-
-
     <!-- Text input-->
-    <form class="form-horizontal" action="/maintenance-request/add" method="POST">
-    <fieldset>
-
-    <!-- Form Name -->
+      <form class="form-horizontal" action="/maintenance-request/add" method="POST">
+        <fieldset>
+      <!-- Form Name -->
     <legend><strong>Maintenance Request</strong></legend>
-
-    <!-- Text input-->
-    <div class="control-group">
-      <label class="control-label" for="Client">Client Name</label>
+<!-- Text input-->
+  <div class="control-group">
+    <label class="control-label" for="Client">Client Name</label>
       <div class="controls">
         <input id="Client" name="client_name" type="text" placeholder="Client" class="input-xlarge" required>
+        </div>
       </div>
-    </div>
-
     <!-- Text input-->
-    <div class="control-group">
-      <label class="control-label" for="textinput">Contacts</label>
+  <div class="control-group">
+    <label class="control-label" for="textinput">Contacts</label>
       <div class="controls">
         <input id="textinput" name="contact_no" type="enum" placeholder="Cell Number" class="input-xlarge" required>
       </div>
     </div>
-
-    <!-- Text input-->
+  <!-- Text input-->
     <div class="control-group">
       <label class="control-label" for="textinput">Subject</label>
-      <div class="controls">
-        <input id="textinput" name="subject" type="text" placeholder="Problem" class="input-xlarge" required>
+          <div class="controls">
+         <input id="textinput" name="subject" type="text" placeholder="Problem" class="input-xlarge" required>
       </div>
     </div>
-
-    <!-- Textarea -->
+  <!-- Textarea -->
     <div class="control-group">
       <label class="control-label" for="textarea">Description</label>
-      <div class="controls">                     
+        <div class="controls">                     
         <textarea id="textarea" placeholder="description" name="description" class="input-xlarge" requred></textarea>
       </div>
     </div>
-
-      <div class="controls">
-        <button id="button1id" name="button1id" class="btn btn-success">SUBMIT</button>                                                                                 <button id="button2id" name="button2id" class="btn btn-danger">Cancel</button>
-       
-      </div>
-    
-    <!-- Button (Double) -->
-    
-    <!-- Button (Double) -->
-   
-
-    </fieldset>
-                  </form>
-
+  <div class="controls">
+    <button id="button1id" name="button1id" class="btn btn-success">SUBMIT</button> 
+      <button id="button2id" name="button2id" class="btn btn-danger">Cancel</button>
+        </div>
+      </fieldset>
+    </form>
   </div>
-
-  </div>
+</div>

@@ -53,7 +53,7 @@ app.post('/products/add', products.add);
 app.get('/products/delete/:id', products.delete);
 
 
-app.get('/tenders', tenders.show);
+app.get('/tenders', tenders.request);
 app.post('/tenders/add', tenders.add);
 app.post('/tenders/update', tenders.update);
 app.get('/tenders/register', tenders.register);

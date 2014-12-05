@@ -35,9 +35,26 @@ exports.complaint = function(req, res, next){
 	res.render('/tenders');
 
 };
-exports.request = function(req , res , next){
-	res.render('/tenders');
 
+exports.request = function(req , res , next){
+	console.log('request...');
+	req.getConnection(function(err, connection){
+		if (err) 
+			return next(err);
+
+		connection.query('SELECT * from tenders', [], function(err, tenders) {
+        	if (err){
+        		console.log(err) 
+        		return next(err);
+        	}
+
+        	console.log(tenders);
+
+    		res.render( 'tenders', {
+    			tenders : tenders
+    		});
+      });
+	});
 };
 
 exports.register = function(req ,res ,next){

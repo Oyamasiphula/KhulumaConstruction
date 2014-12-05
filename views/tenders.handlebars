@@ -1,11 +1,39 @@
 <div class="container">
   <div class="row">
 
+  <div class="col-md-8">
+    <table class="table">
+<tr>
+<th> Reference No</th>
+<th>Title</th>
+<th>Issuer </th>
+<th>Issue Date</th>
+<th>Sector</th>
+<th>Closing date</th>
+<th>Closing Time</th>
+<th>Common Meeting</th>
+<th>Meeting Date</th>
+<th>Description</th>
+</tr>
+{{#tenders}}
+<tr>
+<td>{{ReferenceNo}}</td>
+<td>{{title}}</td>
+<td>{{issuer}}</td>
+<td>{{issueDate}}</td>
+<td>{{sector}}</td>
+<td>{{closingDate}}</td>
+<td>{{closingTime}}</td>
+<td>{{commonMeeting}}</td>
+<td>{{meetingDate}}</td>
+<td>{{description}}</td>
+  </tr>
+{{/tenders}}
+    </table>
+
+  </div>
   
-  <div class="col-md-3"></div>
-  <div class="col-md-4"></div>
-
-
+<div class="col-md-4">
 <form class="" action="/tenders/add" method="POST">
 <fieldset>
 
@@ -38,3 +66,4 @@
 <button type="cancel" class="btn btn-danger">Cancel</button>
 
     </form>
+    </div>

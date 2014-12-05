@@ -35,7 +35,7 @@ exports.request = function(req , res , next){
 	req.getConnection(function(err, connection){
 		if (err) 
 			return next(err);
-		connection.query('SELECT * from maintenance_request', [], function(err, maintenance_requests) {
+		connection.query('SELECT * from maintenance_request order by id desc', [], function(err, maintenance_requests) {
         	if (err) return next(err);
     		res.render( 'maintenance-request', {
     			maintenance_requests : maintenance_requests
