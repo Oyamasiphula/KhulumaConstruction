@@ -3,7 +3,7 @@
 
   <div class="col-md-8">
     <table class="table">
-<tr>
+<tr class="info">
 <th> Reference No</th>
 <th>Title</th>
 <th>Issuer </th>
@@ -17,7 +17,7 @@
 </tr>
 {{#tenders}}
 <tr>
-<td>{{ReferenceNo}}</td>
+<td >{{ReferenceNo}}</td>
 <td>{{title}}</td>
 <td>{{issuer}}</td>
 <td>{{issueDate}}</td>
@@ -43,8 +43,8 @@
     <strong>Reference No:</strong><br>
 <input id="Reference No" type="num" placeholder="Reference Number" name="ReferenceNo" required><br>
     <strong>Title:</strong><br>
-        <input id="Mrs||Mr" type="textinput" placeholder="Mrs||Mr" name="title"  required><br>
-            <strong>Issuer:</strong><br>
+        <input id="e.g. Renovating" type="textinput" placeholder="e.g. Renovating" name="title"  required><br>
+            <strong>Tender Issuer:</strong><br>
           <input id="Issuer" type="textinput" placeholder="Issuer" name="issuer" required><br>
       <strong>Issue Date:</strong><br>
     <input id="DD/MM/YYYY" type="enum" placeholder="DD/MM/YYYY" name="issueDate" required><br>
@@ -52,12 +52,22 @@
 <input id="Sector" type ="textinput" placeholder="Sector" name="sector" required><br>
   <strong>Closing date:</strong><br>
     <input id="DD/MM/YYYY" type="enum" placeholder="DD/MM/YYYY" name="closingDate" required><br>
+
+        
+
       <strong>Closing Time:</strong><br>
         <input id="HH:MM" type="enum" placeholder="HH:MM" name="closingTime"  required><br>
         <strong>Common Meeting:</strong><br>
-            <input id="Yes||No" type="column"placeholder="Yes||No" name="commonMeeting" required><br>
-              <strong>Meeting Date:</strong><br>
-          	<input id="DD/MM/YYYY" type="column" placeholder="DD/MM/YYYY" name="meetingDate" required><br>
+            <div class="input-group bootstrap-timepicker">
+              <input id="timepicker1" type="text" class="input-small">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+            </div>
+
+            <br>
+            <strong>Meeting Date:</strong><br>
+          	<input id="DD/MM/YYYY" type="column" placeholder="DD/MM/YYYY" name="meetingDate" required>
+            
+            <br>
           <strong>Description:</strong><br>
          <textarea id="Description" placeholder="Description" type="textinput" class="col-md-6" name="description" required></textarea><br><br>
         <br>
@@ -66,4 +76,8 @@
 <button type="cancel" class="btn btn-danger">Cancel</button>
 
     </form>
+     <script type="text/javascript">
+            $('#timepicker1').timepicker();
+        </script>
     </div>
+

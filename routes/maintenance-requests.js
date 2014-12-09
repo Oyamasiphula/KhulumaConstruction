@@ -30,9 +30,7 @@ exports.complaint = function(req, res, next){
 
 };
 exports.request = function(req , res , next){
-
-
-	req.getConnection(function(err, connection){
+req.getConnection(function(err, connection){
 		if (err) 
 			return next(err);
 		connection.query('SELECT * from maintenance_request order by id desc', [], function(err, maintenance_requests) {

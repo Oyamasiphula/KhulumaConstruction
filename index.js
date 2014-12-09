@@ -9,7 +9,8 @@ var express = require('express'),
     users = require('./routes/users'),
     tenders = require('./routes/tenders'),
     maintenance_request = require('./routes/maintenance-requests'),
-    complaints = require('./routes/complaints');
+    complaints = require('./routes/complaints'),
+    about = require('./routes/about');
 
 
 var app = express();
@@ -68,6 +69,11 @@ app.get('/complaints', complaints.request);
 app.post('/complaints/add', complaints.add);
 app.get('/complaints/list', complaints.show);
 app.get('/complaints/excellent', complaints.excellent);
+
+app.get('/about', about.show);
+
+
+
 
 
 //start everything up

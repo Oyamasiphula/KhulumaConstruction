@@ -34,7 +34,7 @@ exports.request = function(req , res , next){
 	req.getConnection(function(err, connection){
 		if (err) 
 			return next(err);
-		connection.query('SELECT * from complaint_logs', [], function(err, complaints) {
+		connection.query('SELECT * from complaint_logs order by id desc', [], function(err, complaints) {
         	if (err) return next(err);
     		res.render( 'complaints', {
     			complaints : complaints
