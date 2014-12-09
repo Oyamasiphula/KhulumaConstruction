@@ -72,11 +72,9 @@ app.get('/complaints/excellent', complaints.excellent);
 
 app.get('/about', about.show);
 
-
-
-
-
 //start everything up
-app.listen(3000, function () {
-    console.log('express-handlebars example server listening on: 3000');
+var port = process.env.khuluma_port || 3000;
+
+app.listen( port, function(){
+  console.log('listening on *:' + port);
 });
